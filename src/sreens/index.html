@@ -1,3 +1,52 @@
-<div>
-    hola
-</div>
+<!DOCTYPE HTML>
+<html lang ="es">
+
+<head>
+   <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../style.css" />
+   <title>Document</title>
+
+
+</head>
+
+
+
+
+<body>
+
+   <header id="header">
+       <nav>
+           <ul class="topnav" id="myTopnav">
+
+                   <li><a class="active" href="../screens/index.html"> :casa: </a></li>
+                   <!--<li><a href="../views/visitors.html">Registro de entrada</a></li>
+                   <li><a href="../views/worker.html">Socios</a></li>-->
+                   <li><a href="javascript:void(0);" class="icon" onclick="mymenu()"></a></li>
+
+           </ul>
+       </nav>
+   </header>
+
+
+
+   <h1> Gestión de visitas </h1>
+
+   <img src="../img/police.png">
+
+   <section id="eleccionentrada">
+       <br>
+       <br>
+       <h3>¿Estás de visita?</h3><br>
+       <button><a href="../screens/visitors.html" title="Click para registrar tu visita">Registro de Visitante</a></button>
+       <br>
+       <button><a href="../screens/administrator.html" title="¿Eres Administrador?">Administrador</a></button>
+   </section>
+   <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+   <script src="../Js/app.js"></script>
+
+</body>
+
+</html>
