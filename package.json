@@ -1,0 +1,39 @@
+{
+  "name": "scl008-visitors",
+  "version": "1.0.0",
+  "description": "proyecto registo de visitas",
+  "main": "src/index.html",
+  "scripts": {
+    "test": "jest --coverage",
+    "eslint": "eslint --ext js src/ test/",
+    "htmlhint": "htmlhint src/*.html",
+    "deploy": "gh-pages -d src/",
+    "pretest": "npm run eslint && npm run htmlhint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valeskaperezrretamal/SCL008-visitors.git"
+  },
+  "keywords": [
+    "visitas",
+    "registro"
+  ],
+  "author": "Eli,Betsi,Laura,Vale",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valeskaperezrretamal/SCL008-visitors/issues"
+  },
+  "homepage": "https://github.com/valeskaperezrretamal/SCL008-visitors#readme",
+  "dependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.4.4",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^24.8.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-jest": "^22.6.2",
+    "express": "^4.17.0",
+    "gh-pages": "^2.0.1",
+    "htmlhint": "^0.11.0",
+    "jest": "^24.8.0"
+  }
+}
