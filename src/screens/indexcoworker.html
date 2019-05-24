@@ -1,0 +1,78 @@
+<DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+   <link rel="stylesheet" href="../style.css" />
+   <title>Document</title>
+</head>
+
+<body>
+   <header id="header">
+       <nav>
+           <ul class="topnav" id="myTopnav">
+
+                   <li><a class="active" href="../screens/index.html"> :casa: </a></li>
+                   <li><a href="../screens/ingreso.html">Registro de entrada</a></li>
+                   <li><a href="../screens/indexcoworker.html">Socios</a></li>
+                   <li><a href="javascript:void(0);" class="icon" onclick="mymenu()"></a></li>
+
+           </ul>
+       </nav>
+   </header>
+
+   <h1>Bienvenido Usuario </h1>
+   <section id="contenido">
+
+
+   </section>
+
+
+   <h4>Iniciar como usuario verificado</h4>
+   <input type="email" id="emailco" placeholder="Ingresa tu email :correo_electrónico: " autofocus="autofocus" />
+   <input type="password" id="contraco" placeholder="Ingresa tu contraseña :candado: " required="required" />
+   <button onclick="ingresocowor()" id="mostrar">Iniciar sesión</button>
+
+   <p>¿Eres nuevo?</p>
+
+   <div class="fields">
+       <form>
+           <select id="empresa" onchange="functEmpresa()">
+               <option> ¿A quien visitas? </option>
+               <option>Laura Rámirez</option>
+               <option>Elizabeth Cáceres</option>
+               <option>Valeska Pérez</option>
+               <option>Betsi Salas</option>
+           </select>
+       </form>
+
+       <input type="text" id="conombre" placeholder="Tu nombre va acá">
+       <input type="text" id="coemail" placeholder="ejemplo@blabla.com" required="required">
+       <input type="password" id="cocontraseña" placeholder="Ingresa tu contraseña :candado: " required="required" />
+       <button onclick="iniciarenco()" title="¿Aún no tienes una cuenta?">Registrar Usuario</button><br>
+
+   </div>
+
+
+
+   <input type="button" value="ocultar" id="ocultar">
+
+   <section id="time__noty" class="time__noty">
+       <label class="time__msg"><span>¡Hola!</span> Tu visita espera en el Lobby </label>
+   </section>
+
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+   <script src="../JS/notificacion.js"></script>
+   <script src="../JS/coworker.js"></script>
+   <script src="../JS/app.js"></script>
+
+</body>
+
+</html>
