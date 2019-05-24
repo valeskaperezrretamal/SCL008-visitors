@@ -1,17 +1,17 @@
 // Initialize Cloud Firestore through Firebase
-var db = firebase.firestore();
+let db = firebase.firestore();
 
 
 //función para guardar los datos del usuario visitante
 function guardar() {
 
-    var nombre = document.getElementById("nombre").value; //variable para guardar el nombre
-    var apellido = document.getElementById("apellido").value; // variable para guardar el apellido
-    var email = document.getElementById("email").value; // variable para guardar la dirección de correo electronico
-    var fecha = document.getElementById("fecha").value; // variable para guardar la fecha de entrada
-    var mySelect = document.getElementById("mySelect").value; // variable para guardar el motivo de visita
-    var tiempo = document.getElementById("tiempo").value;
-    var foto = document.getElementById("foto()");
+    let nombre = document.getElementById("nombre").value; //variable para guardar el nombre
+    let apellido = document.getElementById("apellido").value; // variable para guardar el apellido
+    let email = document.getElementById("email").value; // variable para guardar la dirección de correo electronico
+    let fecha = document.getElementById("fecha").value; // variable para guardar la fecha de entrada
+    let mySelect = document.getElementById("mySelect").value; // variable para guardar el motivo de visita
+    let tiempo = document.getElementById("tiempo").value;
+    let foto = document.getElementById("foto()");
 
 
     // los datos se guardan en la colección de visitantes con la compilacion de datos ordenada
@@ -27,13 +27,13 @@ function guardar() {
         })
         .then(function(docRef) { //si todo sale bien el then da una referencia y la valida correctamente
             console.log("Document written with ID: ", docRef.id);
-            var nombre = document.getElementById("nombre").value = ''; //se agregó un string vacio para reiniciar los campos cuando los datos se guarden//
-            var apellido = document.getElementById("apellido").value = '';
-            var email = document.getElementById("email").value = '';
-            var fecha = document.getElementById("fecha").value = '';
-            var mySelect = document.getElementById("mySelect").value = '';
-            var tiempo = document.getElementById("tiempo").value = '';
-            var foto = document.getElementById("context.canva.toDataURL").value = '';
+            let nombre = document.getElementById("nombre").value = ''; //se agregó un string vacio para reiniciar los campos cuando los datos se guarden//
+            let apellido = document.getElementById("apellido").value = '';
+            let email = document.getElementById("email").value = '';
+            let fecha = document.getElementById("fecha").value = '';
+            let mySelect = document.getElementById("mySelect").value = '';
+            let tiempo = document.getElementById("tiempo").value = '';
+            let foto = document.getElementById("context.canva.toDataURL").value = '';
 
         })
         .catch(function(error) {
@@ -49,7 +49,7 @@ function guardar() {
 //=+ hacemos que se agregue un nuevo dato
 //Leer datos en la tabla 
 //pasa los datos de mi coleccion visitantes y los acomoda en cada espacio declarado en mis doc
-var tabla = document.getElementById("tabla");
+let tabla = document.getElementById("tabla");
 db.collection("visitantes").onSnapshot((querySnapshot) => {
     tabla.innerHTML = '';
     querySnapshot.forEach((doc) => {
@@ -58,7 +58,7 @@ db.collection("visitantes").onSnapshot((querySnapshot) => {
         tabla.innerHTML += `  
       
         <tr>
-      <th scope="row"> ${doc.id} </th>
+        <th scope="row"> ${doc.id} </th>
         <td>${doc.data().nombre}</td>
         <td>${doc.data().apellido}</td>
         <td>${doc.data().entrada}</td>
@@ -97,8 +97,8 @@ function eliminar(id) {
 //funcion para seleccionar el motivo de la visita declarando la variable x como laboratoria
 //declarando la variable i como plaza S, regresando la opcion en demo
 function myFunction() {
-    var x = document.getElementById("mySelect");
-    var i = x.selectedIndex;
+    let x = document.getElementById("mySelect");
+    let i = x.selectedIndex;
     document.getElementById("demo").innerHTML = x.options[i].text;
 }
 
