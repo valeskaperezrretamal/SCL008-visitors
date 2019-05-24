@@ -1,4 +1,4 @@
-/notificacion de visita al iniciar como usuario verificado
+//notificacion de visita al iniciar como usuario verificado
 let noty = document.getElementById("time__noty") //variable para mandar a llamar la notificacion
 let mostrar = document.getElementById("mostrar") //muestra la notificacion
 let ocultar = document.getElementById("ocultar")//el usuario puede parar la notificacion
