@@ -11,7 +11,7 @@ function guardar() {
     let fecha = document.getElementById("fecha").value; // variable para guardar la fecha de entrada
     let mySelect = document.getElementById("mySelect").value; // variable para guardar el motivo de visita
     let tiempo = document.getElementById("tiempo").value;
-    let foto = document.getElementById("foto()");
+    //let foto = document.getElementById("foto()");
 
 
     // los datos se guardan en la colección de visitantes con la compilacion de datos ordenada
@@ -22,7 +22,7 @@ function guardar() {
             email: email,
             mySelect: mySelect,
             tiempo: tiempo,
-            foto: foto
+            //foto: foto
 
         })
         .then(function(docRef) { //si todo sale bien el then da una referencia y la valida correctamente
@@ -109,3 +109,16 @@ return dateFns.format(timestamp, 'MM/DD/YYYY')
 var unixNow = (new Date()) ;
 document.write(convertTimestamp(unixNow));
 */
+
+//funcion para guardar datos automaticamente
+function guardarDatos(user){
+    let usuario = {
+        uid:user.uid,
+        nombre:user.displayName,
+        email:user.email,
+        foto:user.photoURL
+    }
+    firebase.database().ref("visitantes")
+    .push(usuario)
+
+}
